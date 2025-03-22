@@ -1,0 +1,15 @@
+// Extend the flip coin problem till either heads or tails wins 11 times.
+
+let heads = 0, tails = 0;
+
+while (heads < 11 && tails < 11) {
+    let flip = Math.random() < 0.5 ? "Heads" : "Tails";
+    if (flip === "Heads") {
+        heads++;
+    } else {
+        tails++;
+    }
+    console.log(`Flip: ${flip} (Heads: ${heads}, Tails: ${tails})`);
+}
+
+console.log(`${heads === 11 ? "Heads" : "Tails"} wins the game!`);
